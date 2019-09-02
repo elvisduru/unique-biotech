@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Slide from 'react-reveal/Slide';
 import { Link } from 'react-router-dom';
 import styles from './Product.module.css';
-import shopIcon from '../../../images/shopping-cart.svg'
+import shopIcon from '../../../images/shopping-cart.svg';
 
 
 export default class Product extends Component {
@@ -86,7 +86,9 @@ export default class Product extends Component {
               <p>&#8358; {this.state.subtotal + this.state.shipping}</p>
             </div>
             <button onClick={this.handleItem}>
-              CONTINUE TO CHECKOUT
+              <Link to="/shop/checkout">
+                CONTINUE TO CHECKOUT
+              </Link>
             </button>
           </div>
         </Slide>

@@ -5,14 +5,14 @@ import styles from './Home.module.css';
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 import bg1 from '../../images/bg1.jpg';
-import bg2 from '../../images/bg2.jpg';
+import bg2 from '../../images/wasteBg.jpg';
 import bg3 from '../../images/bg3.jpg';
 import slide01 from '../../images/slide01.jpg';
 import slide02 from '../../images/slide02.jpg';
 import slide03 from '../../images/slide03.png';
-import slide04 from '../../images/slide04.png';
-import slide05 from '../../images/slide05.png';
-import slide06 from '../../images/slide06.png';
+import slide04 from '../../images/wasteBg2.jpg';
+import slide05 from '../../images/fruitwaste.jpg';
+import slide06 from '../../images/vegetablewaste.jpg';
 import slide07 from '../../images/slide07.jpg';
 import slide08 from '../../images/slide08.jpg';
 import slide09 from '../../images/bg2-1.jpg';
@@ -49,9 +49,9 @@ export default class Home extends Component {
         btnColor: "rgba(48, 87, 101, 1)",
         mainValue: "-100",
         miniSlider: [
-          { caption: "Fruit Waste", image: slide04 },
-          { caption: "Vegetable Waste", image: slide05 },
-          { caption: "Food Waste", image: slide06 }
+          { caption: "Food Waste", image: slide04 },
+          { caption: "Vegetable Waste", image: slide06 },
+          { caption: "Fruit Waste", image: slide05 }
         ]
       },
       {

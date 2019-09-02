@@ -2,10 +2,10 @@ import React, { Component, Fragment } from 'react';
 import styles from './Food.module.css';
 import IntroSection from '../../../components/IntroSection/IntroSection';
 
-import foodBg from '../../../images/food_bg.png';
+import foodBg from '../../../images/wasteBg2.jpg';
 import AboutSection from '../../../components/AboutSection/AboutSection';
 
-import aboutImg from '../../../images/red_chicken.png';
+import aboutImg from '../../../images/aboutWaste.jpg';
 
 import foodwaste from '../../../images/foodwaste.jpg';
 import vegetablewaste from '../../../images/vegetablewaste.jpg';
