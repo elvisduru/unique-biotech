@@ -16,6 +16,7 @@ import slide06 from '../../images/vegetablewaste.jpg';
 import slide07 from '../../images/slide07.jpg';
 import slide08 from '../../images/slide08.jpg';
 import slide09 from '../../images/bg2-1.jpg';
+import fruitWaste from '../../images/fruitwaste2.jpg';
 
 import longArrowRight from '../../images/long-arrow-right.svg';
 import Slider from "../../containers/Slider/Slider";
@@ -44,13 +45,14 @@ export default class Home extends Component {
         title: "Organic Waste Processing",
         description:
           "We process organic Waste through bio-conversion, with the help of the Black Soldier Fly and our bio-technological know-how.",
-        bgImage: bg2,
+        // bgImage: slide05,
+        bgImage: fruitWaste,
         link: "/food",
         btnColor: "rgba(48, 87, 101, 1)",
         mainValue: "-100",
         miniSlider: [
           { caption: "Food Waste", image: slide04 },
-          { caption: "Fruit Waste", image: slide05 },
+          { caption: "Fruit Waste", image: bg2 },
           { caption: "Vegetable Waste", image: slide06 },
         ]
       },
