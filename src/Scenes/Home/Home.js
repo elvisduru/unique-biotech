@@ -101,9 +101,18 @@ export default class Home extends Component {
     }))
   }
 
-  // componentDidMount() {
-  //   setInterval(this.handleNextSlide, 5000);
-  // }
+  componentDidMount() {
+    var timeout;
+    timeout = setInterval(this.handleNextSlide, 5000);
+    document.addEventListener('onmousemove', function (e) {
+      if (timeout) {
+        clearInterval(timeout);
+      }
+      setTimeout(() => {
+        timeout = setInterval(this.handleNextSlide, 5000);
+      }, 3000);
+    }, false)
+  }
 
   render() {
     return (

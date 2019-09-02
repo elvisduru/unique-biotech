@@ -5,10 +5,12 @@ import IntroSection from '../../../components/IntroSection/IntroSection';
 import uniqueBg from '../../../images/unique_bg.png';
 import AboutSection from '../../../components/AboutSection/AboutSection';
 
-import aboutImg from '../../../images/red_chicken.png';
+import aboutImg from '../../../images/unique-office.jpg';
 
-import img01 from '../../../images/chick1.png';
-import img02 from '../../../images/chick2.png';
+import progOil from '../../../images/progoil.jpg';
+import progSoil from '../../../images/progsoil.jpg';
+import progMeal from '../../../images/progmeal.jpg';
+import progLarvae from '../../../images/slide08.jpg';
 import ImgSection from '../../../components/ImgSection/ImgSection';
 
 export default class Unique extends Component {
@@ -43,24 +45,24 @@ export default class Unique extends Component {
         </div>
         <ImgSection
           heading="Proganics Meal"
-          image={img01}
+          image={progMeal}
           text="Proganics Meal contains microbial properties that helps in the development of animals which feed on it. Rich in premium proteins (70%+), fibers and healthy fats, the meal is gotten from the larvae of dried black soldier fly. Our highly nutritious proganics meal serves as good food for chickens, birds and other animals."
         />
         <ImgSection
           right
           heading="Proganics Oil"
-          image={img02}
+          image={progOil}
           text="Proganics Oil is composed of high quality fatty acids with a high acid content which contains antimicrobial properties. Proganics oil is a healthy fat ingredient which is made from the black soldier fly larvae. Our proganics oil can also be blended with other ingredients in formulated pet food, aquaculture and animal feeds. Our proganics Oil is mechanically pressed out of the dry larvae, to provide a high fat oil rich lauric acid, which is only found in coconut and palm kernels oils."
         />
         <ImgSection
           heading="Proganics Soil"
-          image={img02}
+          image={progSoil}
           text="Our proganics Soil is rich in primary and secondary nutrients and is essential in promoting plant growth and it improves the natural qualities of soil for agriculture. Calcium, nitrogen and magnesium makes our proganics soil perfect for root development and crop management."
         />
         <ImgSection
           right
           heading="Proganics Larvae"
-          image={img02}
+          image={progLarvae}
         />
       </div>
     )

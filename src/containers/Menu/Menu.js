@@ -65,8 +65,8 @@ export default class Menu extends Component {
         </Link>
         <div style={{ color: `${this.props.dark ? '#707070' : null}` }}>
           <ul>
-            <li>Our Product</li>
-            <li>Our Market</li>
+            <li><Link to="/shop">Our Product</Link></li>
+            <li><Link to={{ pathname: "/main", mainProps: "-200" }}>Our Market</Link></li>
             <li><Link to="/contact">Contact</Link></li>
           </ul>
           <div className={styles.social}>
