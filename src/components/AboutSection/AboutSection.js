@@ -21,9 +21,6 @@ const AboutSection = ({ cardImg, btnColor, more, heading, content, click }) => {
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}>
-          <p><span style={{
-            color: btnColor
-          }}>&#9658;</span> lorem ipsum dolor sit amet, consetur.</p>
         </div>
       </div>
     </div>
