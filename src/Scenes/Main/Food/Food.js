@@ -12,7 +12,7 @@ import vegetablewaste from '../../../images/vegetablewaste.jpg';
 import fruitwaste from '../../../images/fruitwaste.jpg';
 
 import unLogo from "../../../images/un-logo.svg";
-import lagosLogo from '../../../images/lagos-logo.png';
+import sdgLogo from '../../../images/sdg_logo.png';
 import lawmaLogo from '../../../images/lawma_logo.jpg';
 import logo from '../../../images/logo.svg';
 
@@ -62,9 +62,9 @@ export default class Food extends Component {
         />
         <div className={styles.brands}>
           <img src={logo} alt="" />
-          <img src={lawmaLogo} alt="" />
-          <img src={lagosLogo} alt="" />
           <img src={unLogo} alt="" />
+          <img src={lawmaLogo} alt="" />
+          <img style={{ width: '400px' }} src={sdgLogo} alt="" />
         </div>
       </div>
     )

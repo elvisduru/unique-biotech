@@ -50,8 +50,8 @@ export default class Home extends Component {
         mainValue: "-100",
         miniSlider: [
           { caption: "Food Waste", image: slide04 },
+          { caption: "Fruit Waste", image: slide05 },
           { caption: "Vegetable Waste", image: slide06 },
-          { caption: "Fruit Waste", image: slide05 }
         ]
       },
       {
