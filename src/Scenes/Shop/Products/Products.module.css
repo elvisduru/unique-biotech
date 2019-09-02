@@ -1,0 +1,22 @@
+.Products {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+}
+
+.Products > h1 {
+  font-size: 27px;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 80px;
+}
+
+.Products h2 {
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  font-weight: 200;
+  margin-bottom: 30px;
+  align-self: center;
+}

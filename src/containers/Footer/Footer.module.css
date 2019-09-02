@@ -1,0 +1,117 @@
+.Footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 80px 150px 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-top: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+.Top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.Bottom {
+  border-top: 1px solid #e9e9e9;
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: bold;
+  color: #707070;
+}
+
+.widget {
+  display: flex;
+  flex-direction: column;
+  color: #707070;
+  font-size: 15px;
+  max-width: 340px;
+}
+
+.widget li {
+  margin-top: 7px;
+}
+
+.widget h1 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 27px;
+}
+
+.widget h2 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.widget p {
+  line-height: 22px;
+}
+
+.widget form {
+  margin-top: 20px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.widget form input {
+  width: 100%;
+  padding: 12px;
+  background-color: #f0f1f7;
+  border: 1px solid #e9e9e9;
+  outline: none;
+}
+
+.widget form img {
+  position: absolute;
+  right: 15px;
+}
+
+.widget .social {
+  display: flex;
+  align-items: center;
+}
+
+.widget .social img {
+  width: 20px;
+  height: 20px;
+}
+
+.widget .social > * {
+  margin-right: 18px;
+}
+
+.widget h1,
+.widget h2 {
+  color: #434242;
+}
+
+.language {
+  display: flex;
+  border: 1px solid #f0f1f6;
+  align-self: flex-start;
+  margin-top: 20px;
+}
+
+.language div {
+  padding: 15px;
+}
+
+.language div:first-child {
+  background-color: #f0f1f6;
+}
+
+.Payment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Payment > * {
+  margin-right: 10px;
+}

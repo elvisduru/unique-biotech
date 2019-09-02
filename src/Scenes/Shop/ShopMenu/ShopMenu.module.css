@@ -1,0 +1,51 @@
+.ShopMenu {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 15px 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #434242;
+}
+
+.Logo img {
+  width: 60px;
+  margin-right: 10px;
+}
+
+.ShopMenu ul {
+  display: flex;
+  align-items: center;
+}
+
+.ShopMenu ul li {
+  margin: 0 30px;
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #434242;
+}
+
+.widgets {
+  display: flex;
+  align-items: center;
+}
+
+.cart img {
+  width: 30px;
+  margin-left: 20px;
+}

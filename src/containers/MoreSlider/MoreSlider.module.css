@@ -1,0 +1,36 @@
+.SliderWrapper {
+  overflow: hidden;
+}
+
+.SliderWrapper > div {
+  display: flex;
+}
+
+.Bottom {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Controls button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.Controls button:first-child {
+  margin-right: 15px;
+}
+
+.Indicator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+}
+
+.Indicator > div {
+  width: 60px;
+  background-color: rgba(0, 0, 0, 0.16);
+}
