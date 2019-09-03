@@ -71,8 +71,8 @@ export default class Food extends Component {
           <img style={{ width: '400px' }} src={sdgLogo} alt="" />
         </div>
         <div className={styles.callout}>
-          <h4>Lorem ipsum dolor sit.?</h4>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, earum! Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          <h4>Do you require our services?</h4>
+          <p>Owners of fastfoods, hotels, restaurants and poultry farms, can now reach out to us to help manage their food waste and poultry waste, by clicking the button below.</p>
           <button onClick={this.props.joinUs}>Join Us</button>
         </div>
       </div>
