@@ -8,13 +8,20 @@ import Food from './Food/Food';
 import Growth from './Growth/Growth';
 import Footer from '../../containers/Footer/Footer';
 
+import Slide from 'react-reveal/Slide';
+
 
 export default class Main extends Component {
   state = {
     currentIndex: this.props.index ? this.props.index : 0,
     translateValue: this.props.location.mainProps ? this.props.location.mainProps : 0,
     aboutOverlayOpen: false,
-    foodOverlayOpen: false
+    foodOverlayOpen: false,
+    joinUsOpen: false
+  }
+
+  handleForm = () => {
+    this.setState(prevState => ({ joinUsOpen: !prevState.joinUsOpen }));
   }
 
   handleAboutOverlay = () => {
@@ -57,6 +64,30 @@ export default class Main extends Component {
 
 
   render() {
+    const joinUsForm = this.state.joinUsOpen ? (
+      <div className={styles.Form}>
+        <div className={styles.joinUsBackdrop} onClick={this.handleForm}></div>
+        <Slide bottom>
+          <div className={styles.joinUsContent}>
+            <div className={styles.header}>
+              <h4>Join Us Now</h4>
+              <p onClick={this.handleForm}>&times;</p>
+            </div>
+            <form action="#">
+              <p>Please fill the form below: </p>
+              <input type="text" placeholder="Name of Business" />
+              <input type="text" placeholder="Location" />
+              <input type="text" placeholder="Address" />
+              <input type="text" placeholder="Contact Email" />
+              <input type="text" placeholder="Phone Number" />
+              <input type="text" placeholder="Number of Outlets" />
+              <button>Submit</button>
+            </form>
+          </div>
+        </Slide>
+      </div>
+    ) : null
+
     const aboutOverlay = this.state.aboutOverlayOpen ? (
       <div className={styles.Overlay}>
         <div className={styles.backdrop} onClick={this.handleAboutOverlay}></div>
@@ -107,7 +138,7 @@ Our goal for the next 10 years, is to cover major markets globally with the volu
             transition: 'transform ease-out 0.45s'
           }}>
             <Unique click={this.handleAboutOverlay} aboutOverlayOpen={this.state.aboutOverlayOpen} />
-            <Food click={this.handleFoodOverlay} foodOverlayOpen={this.state.foodOverlayOpen} />
+            <Food click={this.handleFoodOverlay} joinUs={this.handleForm} foodOverlayOpen={this.state.foodOverlayOpen} />
             <Growth />
           </div>
         </div>
@@ -115,8 +146,10 @@ Our goal for the next 10 years, is to cover major markets globally with the volu
         {aboutOverlay}
         {foodOverlay}
 
+
         <Footer />
 
+        {joinUsForm}
         <button className={styles.leftArrow} onClick={this.handlePrevSlide}>
           <img src={arrowCircled} alt="left-arrow" />
         </button>

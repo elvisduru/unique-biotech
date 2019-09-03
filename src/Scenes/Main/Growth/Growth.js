@@ -51,6 +51,11 @@ export default class Growth extends Component {
           image={livestocks}
           text="Digestible and nutritious. Unique Biotechnology® BSFL products will provide quality high protein, palatable energy and fiber to help young growing livestock thrive."
         />
+        <div className={styles.callout}>
+          <h4>Lorem ipsum dolor sit.?</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, earum! Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          <button onClick={this.props.joinUs}>Contact Us Today</button>
+        </div>
       </div>
     );
   }

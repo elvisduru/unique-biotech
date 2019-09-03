@@ -19,6 +19,7 @@ import logo from '../../../images/logo.svg';
 import ImgSection from '../../../components/ImgSection/ImgSection';
 
 export default class Food extends Component {
+
   render() {
     return (
       <div className={styles.Food}>
@@ -49,15 +50,18 @@ export default class Food extends Component {
         </div>
         <ImgSection
           heading="Food Waste"
+          height="58vh"
           image={foodwaste}
         />
         <ImgSection
           right
           heading="Vegetable Waste"
+          height="58vh"
           image={vegetablewaste}
         />
         <ImgSection
           heading="Fruit Waste"
+          height="58vh"
           image={fruitwaste}
         />
         <div className={styles.brands}>
@@ -65,6 +69,11 @@ export default class Food extends Component {
           <img src={unLogo} alt="" />
           <img src={lawmaLogo} alt="" />
           <img style={{ width: '400px' }} src={sdgLogo} alt="" />
+        </div>
+        <div className={styles.callout}>
+          <h4>Lorem ipsum dolor sit.?</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, earum! Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          <button onClick={this.props.joinUs}>Join Us</button>
         </div>
       </div>
     )

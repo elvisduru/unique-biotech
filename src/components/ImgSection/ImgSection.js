@@ -5,7 +5,8 @@ import Slide from 'react-reveal/Slide';
 
 const ImgSection = props => (
   <section className={styles.imgSection} style={{
-    flexDirection: `${props.right ? 'row-reverse' : 'row'}`
+    flexDirection: `${props.right ? 'row-reverse' : 'row'}`,
+    height: props.height
   }}>
     <div className={styles.imgWrapperLeft}>
       {
