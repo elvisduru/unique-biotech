@@ -1,0 +1,82 @@
+.AboutSection {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 150px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+.Left {
+  width: 34%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.Right {
+  width: 40%;
+}
+
+.Card {
+  width: 450px;
+  height: 540px;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+}
+
+.Card p {
+  background-color: white;
+  color: #000;
+  font-size: 12px;
+  padding: 15px 15px 15px 0;
+}
+
+.Card p span {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: serif;
+  margin-left: -2px;
+}
+
+.Left h1 {
+  padding: 10px 18px;
+  font-size: 10px;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.Left h2 {
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #434242;
+}
+
+.Left p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #707070;
+  margin-top: 30px;
+}
+
+.Left button {
+  padding: 12px;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+}
+
+.Left button img {
+  margin-left: 15px;
+}

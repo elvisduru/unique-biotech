@@ -1,0 +1,161 @@
+.Shipping {
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Shipping > h1 {
+  text-align: center;
+  font-weight: bold;
+  margin: 20px 0;
+  font-size: 19px;
+}
+
+.Shipping hr {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+  margin-bottom: 20px;
+}
+
+.progress {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.progress > * {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress span {
+  width: 10px;
+  height: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  background-color: white;
+  border-radius: 50%;
+  margin-top: 4px;
+}
+
+.progress::after {
+  content: "";
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+  position: absolute;
+  width: 100%;
+  top: 20px;
+  z-index: -1;
+}
+
+.button {
+  align-self: flex-end;
+}
+
+.button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2b2b2b;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  outline: none;
+  margin: 15px 0 40px;
+}
+
+.button span {
+  justify-content: stretch;
+  padding: 10px;
+}
+
+.button span:first-of-type {
+  background-color: #e8e8e8;
+}
+
+.button span:last-of-type {
+  padding: 0 35px;
+}
+
+.form {
+  display: flex;
+  width: 100%;
+}
+
+.form > * {
+  width: 50%;
+}
+
+.left form {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+  max-width: 420px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.field input {
+  width: 250px;
+  padding: 5px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  outline: none;
+}
+
+.field input:focus {
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+.form form > p {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.right {
+  padding: 0 50px;
+}
+
+.right div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  color: #2b2b2b;
+  background-color: #e8e8e8;
+  padding: 10px 0;
+}
+
+.right div h2 {
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid #cccccc;
+}
+
+.right div p {
+  padding: 15px;
+}
+
+.right > p {
+  margin-top: 50px;
+  color: red;
+}
+
+.bold {
+  font-weight: bold;
+}

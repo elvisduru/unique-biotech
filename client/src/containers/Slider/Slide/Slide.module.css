@@ -1,0 +1,14 @@
+.Slide {
+  margin-right: 30px;
+  transition: transform 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.Slide:first-child {
+  margin-right: 45px;
+}
+
+.Slide h1 {
+  font-size: 10px;
+  font-weight: 200;
+  margin: 6px 0;
+}

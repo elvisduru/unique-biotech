@@ -1,0 +1,174 @@
+.Billing {
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Billing > h1 {
+  text-align: center;
+  font-weight: bold;
+  margin: 20px 0;
+  font-size: 19px;
+}
+
+.Billing hr {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+  margin-bottom: 20px;
+}
+
+.progress {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.progress > * {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress span {
+  width: 10px;
+  height: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  background-color: white;
+  border-radius: 50%;
+  margin-top: 4px;
+}
+
+.progress::after {
+  content: "";
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+  position: absolute;
+  width: 100%;
+  top: 20px;
+  z-index: -1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  color: #2b2b2b;
+}
+
+.content > div {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.content > div h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.content > div .wrapper {
+  background-color: #e8e8e8;
+}
+
+.Billing table {
+  width: 100%;
+}
+
+.Billing thead {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+.Billing th {
+  font-size: 14px;
+  text-align: left;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.Billing td {
+  vertical-align: middle;
+  text-align: left;
+  padding: 20px;
+  font-weight: 500;
+}
+
+.Billing td.name {
+  font-weight: bold;
+}
+
+.Billing td.price,
+.Billing th.price {
+  text-align: right;
+}
+
+.Billing .image img {
+  width: 90px;
+  height: 90px;
+}
+
+.summary {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+}
+
+.summary > div {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.summary > div > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.summary .total {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.shipping a {
+  font-size: 12px;
+  text-decoration: underline;
+  display: block;
+  margin-top: 30px;
+}
+
+.shipping p {
+  margin: 10px 0;
+}
+
+.wrapper {
+  padding: 15px;
+}
+
+.wrapper > h4 {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.wrapper p {
+  font-size: 14px;
+}
+
+.purchase {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+.purchase button {
+  padding: 10px 20px;
+  color: white;
+  background-color: #2b2b2b;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}

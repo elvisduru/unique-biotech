@@ -1,0 +1,168 @@
+.Checkout {
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0 100px;
+}
+
+.Checkout > h1 {
+  text-align: center;
+  font-weight: bold;
+  margin: 20px 0;
+  font-size: 19px;
+}
+
+.Checkout > a {
+  font-size: 14px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  display: block;
+  color: #2b2b2b;
+  text-transform: uppercase;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  align-self: flex-start;
+}
+
+.Checkout > a:hover {
+  color: #948989;
+}
+
+.Checkout > a span {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.Checkout hr {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+.button {
+  align-self: flex-end;
+}
+
+.button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2b2b2b;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  outline: none;
+  margin: 15px 0 40px;
+}
+
+.button span {
+  justify-content: stretch;
+  padding: 10px;
+}
+
+.button span:first-of-type {
+  background-color: #e8e8e8;
+}
+
+.button span:last-of-type {
+  padding: 0 35px;
+}
+
+.Checkout thead {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+.Checkout th {
+  font-size: 14px;
+  text-align: left;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.Checkout td {
+  vertical-align: middle;
+  text-align: left;
+  padding: 20px;
+}
+
+.Checkout td.name {
+  font-weight: bold;
+}
+
+.Checkout td.control,
+.Checkout th.control {
+  text-align: right;
+}
+
+.Checkout .image img {
+  width: 90px;
+  height: 90px;
+}
+
+.Checkout td.control button {
+  margin-top: 30px;
+  border: 1px solid #2b2b2b;
+  background-color: transparent;
+  font-size: 10px;
+  padding: 6px 8px;
+  cursor: pointer;
+  outline: none;
+}
+
+.Checkout td.control button:hover {
+  background-color: #2b2b2b;
+  color: white;
+}
+
+.widget {
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.widget span {
+  padding: 0 7px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.summary {
+  width: 240px;
+  margin-left: auto;
+}
+
+.summary > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+.summary .total {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.Checkout > p {
+  font-size: 12px;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.16);
+  padding-top: 12px;
+}
+
+.Checkout > p a {
+  color: black;
+  font-weight: 500;
+}
