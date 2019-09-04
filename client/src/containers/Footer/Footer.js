@@ -26,10 +26,10 @@ export default class Footer extends Component {
           <div className={styles.widget}>
             <h2>Our Company</h2>
             <ul>
-              <li>FAQ</li>
+              <li><a href="/faq">FAQ</a></li>
               <li>Support</li>
               <li>Research</li>
-              <li>Terms and Conditions</li>
+              <li><a href="/terms">Terms and Conditions</a></li>
               <li>Join Us</li>
             </ul>
           </div>

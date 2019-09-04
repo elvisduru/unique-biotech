@@ -1,0 +1,21 @@
+.nav {
+  padding-top: 30px;
+}
+
+.FAQ main {
+  margin-top: 50px;
+  padding: 0 150px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  align-items: center;
+}
+
+.FAQ main > h1 {
+  font-size: 80px;
+  font-weight: 100;
+}
+
+.content {
+  padding: 80px;
+}

@@ -6,6 +6,8 @@ import Main from './Scenes/Main/Main';
 import Contact from './Scenes/Contact/Contact';
 import Shop from './Scenes/Shop/Shop';
 import ContactBox from './components/ContactBox/ContactBox';
+import Terms from './Scenes/Terms/Terms';
+import FAQ from './Scenes/FAQ/FAQ';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/main" exact component={Main} />
           <Route path="/contact" exact component={Contact} />
           <Route path="/shop" component={Shop} />
+          <Route path="/terms" component={Terms} />
+          <Route path="/faq" component={FAQ} />
           <Redirect to="/" />
         </Switch>
       </BrowserRouter>
