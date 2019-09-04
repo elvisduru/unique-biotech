@@ -2,10 +2,13 @@ import React from "react";
 import styles from "./Terms.module.css";
 import Menu from "../../containers/Menu/Menu";
 import Footer from "../../containers/Footer/Footer";
+import ContactBox from "../../components/ContactBox/ContactBox";
 
 const Terms = () => {
   return (
     <div className={styles.Terms}>
+      <ContactBox />
+
       <div className={styles.nav}>
         <Menu dark />
       </div>

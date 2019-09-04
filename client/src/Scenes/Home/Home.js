@@ -20,6 +20,7 @@ import fruitWaste from '../../images/fruitwaste2.jpg';
 import longArrowRight from '../../images/long-arrow-right.svg';
 import Slider from "../../containers/Slider/Slider";
 import Menu from "../../containers/Menu/Menu";
+import ContactBox from "../../components/ContactBox/ContactBox";
 
 export default class Home extends Component {
   state = {
@@ -123,6 +124,8 @@ export default class Home extends Component {
           overflowY: 'hidden'
         }}
       >
+        <ContactBox />
+
         <Menu fixed />
         <div className={styles.Indicator}>
           <div className={styles.IndicatorBar}>

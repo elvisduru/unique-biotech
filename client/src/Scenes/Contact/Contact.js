@@ -5,11 +5,13 @@ import Footer from '../../containers/Footer/Footer';
 
 import phone from '../../images/phone.svg';
 import speechBubble from '../../images/speech-bubbles.svg';
+import ContactBox from '../../components/ContactBox/ContactBox';
 
 export default class Contact extends Component {
   render() {
     return (
       <div className={styles.Contact}>
+        <ContactBox />
         <main>
           <div style={{ paddingTop: '10px', width: '100%' }}>
             <Menu dark />

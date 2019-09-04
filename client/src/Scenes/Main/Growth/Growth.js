@@ -36,14 +36,14 @@ export default class Growth extends Component {
         <ImgSection
           heading="Pets"
           image={pets}
-          text="Looking for a novel protein source? Unique Biotech® products are up to the challenge. Proganics Meal and Proganics Oil are both palatable and nutritious as an ingredient in pet food. Dogs and cats will benefit from the high lauric acid content and rich amino acid make up."
+          text="Proganics Meal and Proganics Oil are both palatable and nutritious as an ingredient in pet food. Dogs and cats will benefit from the high lauric acid content and rich amino acid make up."
 
         />
         <ImgSection
           right
           heading="Fertilizer"
           image={fertilizer}
-          text="Ideal for flowers, vegetables, fruits, lawns, and anyone looking for a natural, chemical free fertilizer. Frass made from Uniuque Biotechnology® Premium dried black soldier fly larvae (BSFL) is an all-natural fertilizer containing a nutrient dense blend of N-P-K and minerals. Fertilizer is produced in the U.S. with U.S. sourced ingredients."
+          text="Ideal for flowers, vegetables, fruits, lawns, and anyone looking for a natural, chemical free fertilizer. Frass made from Uniuque Biotechnology® Premium dried black soldier fly larvae (BSFL) is an all-natural fertilizer containing a nutrient dense blend of N-P-K and minerals."
 
         />
         <ImgSection
@@ -52,8 +52,8 @@ export default class Growth extends Component {
           text="Digestible and nutritious. Unique Biotechnology® BSFL products will provide quality high protein, palatable energy and fiber to help young growing livestock thrive."
         />
         <div className={styles.callout}>
-          <h4>Lorem ipsum dolor sit.?</h4>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, earum! Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          <h4>Are you a livestock farmer?</h4>
+          <p>You can now reach us directly to get a discount on our products to sustain your livestock. Our products are higly nutritious for fishes, birds, poultries, pigs, and other livestocks.</p>
           <button onClick={this.props.joinUs}>Contact Us Today</button>
         </div>
       </div>

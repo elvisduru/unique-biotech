@@ -15,6 +15,7 @@ import Shipping from './Shipping/Shipping';
 import Billing from './Billing/Billing';
 import Confirm from './Confirm/Confirm';
 import Footer from '../../containers/Footer/Footer';
+import ContactBox from '../../components/ContactBox/ContactBox';
 
 export default class Shop extends Component {
   state = {
@@ -149,6 +150,7 @@ export default class Shop extends Component {
     return (
       <div className={styles.Shop}>
         <div>
+          <ContactBox />
           <ShopMenu items={this.state.items} />
           <Switch>
             <Route exact path="/shop" component={Products} />

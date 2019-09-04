@@ -5,16 +5,14 @@ import Home from './Scenes/Home/Home';
 import Main from './Scenes/Main/Main';
 import Contact from './Scenes/Contact/Contact';
 import Shop from './Scenes/Shop/Shop';
-import ContactBox from './components/ContactBox/ContactBox';
 import Terms from './Scenes/Terms/Terms';
 import FAQ from './Scenes/FAQ/FAQ';
+import Admin from './Scenes/Admin/Admin';
 
 function App() {
   return (
     <div>
       <BrowserRouter>
-        {/* <Menu /> */}
-        <ContactBox />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/main" exact component={Main} />
@@ -22,6 +20,7 @@ function App() {
           <Route path="/shop" component={Shop} />
           <Route path="/terms" component={Terms} />
           <Route path="/faq" component={FAQ} />
+          <Route path="/admin" component={Admin} />
           <Redirect to="/" />
         </Switch>
       </BrowserRouter>

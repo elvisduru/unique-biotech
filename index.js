@@ -1,10 +1,21 @@
 const express = require('express');
+const session = require("express-session");
 const path = require('path');
 const bodyParser = require('body-parser');
 const passport = require("passport");
 const { Admin } = require('./models');
+const MongoStore = require('connect-mongo')(session);
 
 const app = express();
+
+app.use(
+  session({
+    secret: 'iamunique',
+    store: new MongoStore({ mongooseConnection: dbConnection }),
+    resave: false,
+    saveUninitialized: false
+  })
+)
 
 app.use(express.static(path.join(__dirname, 'client/build')));
 

@@ -12,8 +12,10 @@ export default class ShopMenu extends Component {
     return (
       <div className={styles.ShopMenu}>
         <div className={styles.Logo}>
-          <img src={Logo} alt="" />
-          <h1>Unique Store</h1>
+          <Link to="/">
+            <img src={Logo} alt="" />
+            <h1>Unique Store</h1>
+          </Link>
         </div>
         <div className={styles.right}>
           <ul>

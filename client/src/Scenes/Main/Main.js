@@ -9,6 +9,7 @@ import Growth from './Growth/Growth';
 import Footer from '../../containers/Footer/Footer';
 
 import Slide from 'react-reveal/Slide';
+import ContactBox from '../../components/ContactBox/ContactBox';
 
 
 export default class Main extends Component {
@@ -131,6 +132,8 @@ Our goal for the next 10 years, is to cover major markets globally with the volu
 
     return (
       <div className={styles.Main}>
+        <ContactBox />
+
         <Menu fixed />
         <div className={styles.Wrapper}>
           <div style={{

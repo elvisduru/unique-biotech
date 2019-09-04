@@ -3,10 +3,13 @@ import styles from './FAQ.module.css';
 import Menu from '../../containers/Menu/Menu';
 import Accordion from '../../components/Accordion/Accordion';
 import Footer from '../../containers/Footer/Footer';
+import ContactBox from '../../components/ContactBox/ContactBox';
 
 const FAQ = () => {
   return (
     <div className={styles.FAQ}>
+      <ContactBox />
+
       <div className={styles.nav}>
         <Menu dark />
       </div>
