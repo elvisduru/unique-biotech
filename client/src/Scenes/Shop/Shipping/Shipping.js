@@ -17,7 +17,7 @@ export default class Shipping extends Component {
   }
 
   handleCheckout = () => {
-    if (!this.props.fields.firstName || !this.props.fields.lastName || !this.props.fields.address1 || !this.props.fields.state || !this.props.fields.telephone) {
+    if (!this.props.fields.firstName || !this.props.fields.lastName || !this.props.fields.email || !this.props.fields.address1 || !this.props.fields.state || !this.props.fields.telephone) {
       this.setState({ error: true });
       this.reset()
     } else {
@@ -58,6 +58,10 @@ export default class Shipping extends Component {
               <div className={styles.field}>
                 <p>LAST NAME *</p>
                 <input type="text" name="lastName" value={this.props.fields.lastName} onChange={this.props.handleInput} />
+              </div>
+              <div className={styles.field}>
+                <p>EMAIL *</p>
+                <input type="email" name="email" value={this.props.fields.email} onChange={this.props.handleInput} />
               </div>
               <div className={styles.field}>
                 <p>ADDRESS LINE 1 *</p>

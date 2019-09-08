@@ -54,6 +54,7 @@ export default class Shop extends Component {
     fields: {
       firstName: "",
       lastName: "",
+      email: "",
       address1: "",
       address2: "",
       city: "",
@@ -62,7 +63,8 @@ export default class Shop extends Component {
       telephone: "",
       mobile: "",
     },
-    orderID: ""
+    orderID: "",
+    key: "pk_test_5b990862db0b2dc72dfeaa3d96fa813afcfc586c"
   }
 
   updateTotal = () => {
@@ -136,8 +138,6 @@ export default class Shop extends Component {
     const total = data.total;
     const order = { customer, items, orderID, total }
 
-    console.log(order)
-
     try {
       await axios.post('/api/orders', order)
     } catch (err) {
@@ -166,6 +166,8 @@ export default class Shop extends Component {
               fields={this.state.fields}
               total={this.state.total}
               processOrder={this.processOrder}
+              orderID={this.state.orderID}
+              pkey={this.state.key}
               {...props} />} />
             <Route exact path="/shop/confirm" render={(props) => <Confirm
               orderID={this.state.orderID}

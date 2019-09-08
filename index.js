@@ -9,6 +9,7 @@ const MongoStore = require('connect-mongo')(session);
 const dbConnection = require('./db');
 const adminRoutes = require("./routes/admin");
 const app = express();
+var cors = require('cors');
 
 app.use(
   session({
@@ -33,6 +34,17 @@ passport.use(Admin.createStrategy());
 
 passport.serializeUser(Admin.serializeUser());
 passport.deserializeUser(Admin.deserializeUser());
+
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+app.options("*", cors());
 
 app.get('/api/getID', (req, res) => {
   const chars = [..."ABCDEFGHJKLMNPQRSTUVWXYZ0123456789"];

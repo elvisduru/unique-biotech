@@ -2,11 +2,20 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Billing.module.css';
 
+import PaystackButton from 'react-paystack';
+
 export default class Billing extends Component {
 
-  handleCompletePurphase = () => {
-    this.props.processOrder();
-    this.props.history.push("/shop/confirm");
+  handleCompletePurphase = (response) => {
+    console.log(response)
+    if (response.status === "success") {
+      this.props.processOrder();
+      this.props.history.push("/shop/confirm");
+    }
+  }
+
+  close = () => {
+    console.log("Payment closed");
   }
 
   render() {
@@ -98,7 +107,20 @@ export default class Billing extends Component {
             </div>
           </div>
           <div className={styles.purchase}>
-            <button onClick={this.handleCompletePurphase}>COMPLETE PURCHASE</button>
+            <PaystackButton
+              text="Make Payment"
+              className="payButton"
+              callback={this.handleCompletePurphase}
+              close={this.close}
+              disabled={true}
+              embed={true}
+              reference={this.props.orderID}
+              email={this.props.fields.email}
+              amount={this.props.total * 100}
+              paystackkey={this.props.pkey}
+              tag="button"
+            />
+            {/* <button onClick={this.handleCompletePurphase}>COMPLETE PURCHASE</button> */}
           </div>
         </div>
       </div>
