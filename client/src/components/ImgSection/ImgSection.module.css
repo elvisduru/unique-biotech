@@ -120,7 +120,7 @@
   .imgSection {
     height: unset !important;
     flex-direction: column-reverse !important;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
   }
 
   .imgWrapperLeft,
@@ -147,7 +147,7 @@
   } */
 
   .imgSection:nth-child(2) {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   .imgWrapperLeft > div {
@@ -166,14 +166,13 @@
   .description {
     margin-left: unset;
     width: unset;
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: center;
   }
 
   .description > div {
     margin-left: unset;
     width: 100%;
-    padding: 20px;
   }
 
   .description > div h2 {
@@ -185,5 +184,6 @@
   .description > div p {
     font-size: 14px;
     line-height: 18px;
+    padding: 0 15px;
   }
 }

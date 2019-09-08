@@ -22,3 +22,26 @@
 .ContactBox a:hover {
   color: white;
 }
+
+@media (max-width: 768px) {
+  .ContactBox {
+    font-size: 11px;
+    width: 100vw;
+    border-radius: 0;
+    padding: 5px 10px;
+  }
+
+  .ContactBox p {
+    display: flex;
+    align-items: center;
+  }
+
+  .ContactBox p:last-child span {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ContactBox p:last-child span a:first-child {
+    margin-bottom: 4px;
+  }
+}

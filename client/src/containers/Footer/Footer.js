@@ -11,7 +11,23 @@ import instagramDark from '../../images/Instagram.svg';
 import linkedinDark from '../../images/linkedin.svg';
 import pinterestDark from '../../images/pinterest.svg';
 
+import axios from 'axios';
+
 export default class Footer extends Component {
+  state = {
+    sent: false,
+    email: ""
+  }
+
+  handleSubscribe = () => {
+    const email = this.state.email;
+    axios.post('/api/subscribe', { email })
+      .then(response => {
+        this.setState({ sent: response.data.sent })
+      })
+      .catch(err => console.log(err))
+  }
+
   render() {
     return (
       <div className={styles.Footer}>
@@ -46,9 +62,10 @@ export default class Footer extends Component {
             <p>
               Subscribe now to get news, updates and more information about our unique services
             </p>
+            {this.state.sent && <p style={{ color: '#2196f3' }}>You have subscribed successfully!</p>}
             <form action="">
-              <input type="text" placeholder="Your Email" maxLength="38" />
-              <img src={sendBtn} alt="" />
+              <input type="text" onChange={e => this.setState({ email: e.target.value })} value={this.state.email} placeholder="Your Email" maxLength="38" />
+              <img onClick={this.handleSubscribe} src={sendBtn} alt="" />
             </form>
             <div className={styles.social}>
               <a href="https://www.facebook.com/uniquebiotechnology.westafrica"><img src={facebookDark} alt="facebook" /></a>

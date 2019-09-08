@@ -139,7 +139,7 @@ export default class Shop extends Component {
     console.log(order)
 
     try {
-      await axios.post('/api/order', order)
+      await axios.post('/api/orders', order)
     } catch (err) {
       console.log(err);
     }

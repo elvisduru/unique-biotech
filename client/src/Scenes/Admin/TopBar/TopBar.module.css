@@ -1,0 +1,58 @@
+.TopBar {
+  position: fixed;
+  width: 85vw;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  height: 60px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  z-index: 1;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0 40px;
+}
+
+.TopBar h2 {
+  font-size: 18px;
+}
+
+.TopBar > div {
+  display: flex;
+  align-items: center;
+}
+
+.TopBar > div button {
+  background-color: #4bc0c0;
+  padding: 5px 20px;
+  margin-left: 45px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.user img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.order {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.order span {
+  position: absolute;
+}

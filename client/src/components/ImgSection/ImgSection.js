@@ -24,7 +24,7 @@ const ImgSection = props => (
           )
       }
     </div>
-    <div className={styles.description} style={props.right ? {
+    <div className={styles.description} style={props.right && window.innerWidth > 768 ? {
       marginLeft: 'none',
       marginRight: 'auto'
     } : null}>

@@ -54,7 +54,7 @@ export default class Growth extends Component {
         <div className={styles.callout}>
           <h4>Are you a livestock farmer?</h4>
           <p>You can now reach us directly to get a discount on our products to sustain your livestock. Our products are higly nutritious for fishes, birds, poultries, pigs, and other livestocks.</p>
-          <button onClick={this.props.joinUs}>Contact Us Today</button>
+          <a href="/contact">Contact Us Today</a>
         </div>
       </div>
     );

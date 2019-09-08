@@ -158,9 +158,10 @@ export default class Home extends Component {
                 <p>{slide.description}</p>
                 <Link to={{ pathname: "/main", mainProps: slide.mainValue }} style={{ backgroundColor: slide.btnColor }}>Learn more <img src={longArrowRight} alt="" /></Link>
               </div>
-              <div className={styles.Right}>
+              {window.innerWidth > 768 && <div className={styles.Right}>
                 <Slider slides={slide.miniSlider} btnColor={slide.btnColor} />
-              </div>
+              </div>}
+
             </div>
           ))}
         </div>

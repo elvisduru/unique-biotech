@@ -56,3 +56,9 @@
 .footer button span:last-of-type {
   padding: 0 15px;
 }
+
+@media (max-width: 768px) {
+  .ProductItem {
+    margin-bottom: 30px;
+  }
+}

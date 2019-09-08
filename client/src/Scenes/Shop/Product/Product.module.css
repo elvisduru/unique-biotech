@@ -126,6 +126,7 @@
   z-index: 2;
   margin-left: auto;
   margin-right: 30px;
+  position: relative;
 }
 
 .header {
@@ -238,4 +239,50 @@
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .Product {
+    padding: 10px;
+  }
+
+  .Product > div {
+    flex-direction: column;
+  }
+
+  .left {
+    width: unset;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+
+  .right {
+    width: unset;
+  }
+
+  .right > div {
+    margin-top: 20px;
+  }
+
+  .right h2 {
+    font-size: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+  }
+
+  .right > p {
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
+
+  .right > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .right > div > p {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
 }

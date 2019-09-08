@@ -11,7 +11,7 @@ const ContactBox = () => {
       &nbsp;
       &nbsp;
       &nbsp;
-      <p><img src={phoneIcon} alt="" /> <a href="tel:+234014537121">01-453 7121, </a><a href="tel:+2348107763821">+234 810 776 3821</a></p>
+      <p><img src={phoneIcon} alt="" /> <span><a href="tel:+234014537121">01-453 7121, </a><a href="tel:+2348107763821">+234 810 776 3821</a></span></p>
     </div>
   )
 }

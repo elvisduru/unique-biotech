@@ -67,6 +67,26 @@
   z-index: 99;
 }
 
+@media (max-width: 768px) {
+  .Left {
+    padding-left: 75px;
+    padding-right: 30px;
+  }
+
+  .Left h1 {
+    font-size: 50px;
+  }
+
+  .Left p {
+    width: unset;
+  }
+
+  .Indicator {
+    left: 30px;
+    top: 30vh;
+  }
+}
+
 .IndicatorBar {
   display: flex;
   flex-direction: column;

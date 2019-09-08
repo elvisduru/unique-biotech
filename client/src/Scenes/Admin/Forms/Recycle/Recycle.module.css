@@ -1,0 +1,147 @@
+.Recycle {
+  padding-top: 40px;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content {
+  display: flex;
+}
+
+.left {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 30px;
+  color: #93a4aa;
+}
+
+.right {
+  padding-left: 30px;
+  border-left: 1px solid rgba(0, 0, 0, 0.16);
+  flex: 1;
+  padding-right: 200px;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.search input {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  outline: none;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.search p {
+  font-size: 18px;
+  padding-left: 10px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.submissions {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 400px;
+}
+
+.submissions li {
+  margin-bottom: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.submissions li:hover {
+  background-color: rgba(214, 225, 229, 0.4);
+}
+
+.right > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.controls {
+  margin-left: auto;
+  padding-bottom: 15px;
+}
+
+.controls button {
+  padding: 10px 30px;
+  background-color: transparent;
+  border: 2px solid orangered;
+  border-radius: 30px;
+  color: orangered;
+  font-weight: 500;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  outline: none;
+  cursor: pointer;
+}
+
+.title {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.title > div {
+  display: flex;
+  align-items: center;
+}
+
+.title > div .avatar {
+  margin-right: 15px;
+  padding: 15px;
+  background-color: #9673d0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.body > div {
+  margin-bottom: 40px;
+  width: 50%;
+}
+
+.body > div h4 {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.alert {
+  display: flex;
+  justify-content: space-between;
+  background-color: #4bc0c0;
+  padding: 15px;
+  color: white;
+  font-size: 14px;
+  margin-bottom: 15px;
+  margin-right: 100px;
+}
+
+.alert p:last-child {
+  cursor: pointer;
+}

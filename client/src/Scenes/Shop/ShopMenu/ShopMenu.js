@@ -14,7 +14,7 @@ export default class ShopMenu extends Component {
         <div className={styles.Logo}>
           <Link to="/">
             <img src={Logo} alt="" />
-            <h1>Unique Store</h1>
+            {window.innerWidth > 768 && <h1>Unique Store</h1>}
           </Link>
         </div>
         <div className={styles.right}>
@@ -23,12 +23,14 @@ export default class ShopMenu extends Component {
             <li>Support</li>
           </ul>
           <div className={styles.widgets}>
-            <SearchBar />
+            {window.innerWidth > 768 && <SearchBar />}
             <div className={styles.cart}>
-              <img src={cartIcon} alt="" />
-              {items.length > 0 ? (
-                <span>{items.length}</span>
-              ) : null}
+              <Link to="/shop/checkout">
+                <img src={cartIcon} alt="" />
+                {items.length > 0 ? (
+                  <span>{items.length}</span>
+                ) : null}
+              </Link>
             </div>
           </div>
         </div>

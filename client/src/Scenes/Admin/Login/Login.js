@@ -24,11 +24,12 @@ export default class Login extends Component {
           <img src={Logo} alt="" />
         </div>
         <div className={styles.body}>
-          <form>
+          <div className={styles.form}>
+            {this.props.error ? <p className={styles.error}>{this.props.error}</p> : null}
             <input type="text" name="username" value={this.state.username} onChange={this.handleInput} placeholder="Username" />
             <input type="password" name="password" value={this.state.password} onChange={this.handleInput} placeholder="Password" />
-            <button>Sign In</button>
-          </form>
+            <button onClick={() => { this.props.handleLogin(this.state.fields) }}>Sign In</button>
+          </div>
         </div>
       </div>
     )

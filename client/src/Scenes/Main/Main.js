@@ -8,8 +8,9 @@ import Food from './Food/Food';
 import Growth from './Growth/Growth';
 import Footer from '../../containers/Footer/Footer';
 
-import Slide from 'react-reveal/Slide';
+import { Slide, Bounce } from 'react-reveal';
 import ContactBox from '../../components/ContactBox/ContactBox';
+import axios from 'axios';
 
 
 export default class Main extends Component {
@@ -18,7 +19,35 @@ export default class Main extends Component {
     translateValue: this.props.location.mainProps ? this.props.location.mainProps : 0,
     aboutOverlayOpen: false,
     foodOverlayOpen: false,
-    joinUsOpen: false
+    joinUsOpen: false,
+    fields: {
+      businessName: "",
+      location: "",
+      address: "",
+      email: "",
+      phone: "",
+      outlets: ""
+    },
+    messageSent: false,
+    error: false
+  }
+
+  handleInput = e => {
+    const fields = { ...this.state.fields };
+    fields[e.target.name] = e.target.value;
+    this.setState({ fields })
+  }
+
+  handleSubmit = () => {
+    const fields = { ...this.state.fields };
+    axios.post('/api/recycle', fields)
+      .then(response => {
+        if (response.data.err) {
+          this.setState({ error: true })
+        }
+        this.setState({ messageSent: response.data.sent })
+      })
+      .catch(err => console.log(err))
   }
 
   handleForm = () => {
@@ -66,7 +95,7 @@ export default class Main extends Component {
 
   render() {
     const joinUsForm = this.state.joinUsOpen ? (
-      <div className={styles.Form}>
+      <div className={styles.FormOverlay}>
         <div className={styles.joinUsBackdrop} onClick={this.handleForm}></div>
         <Slide bottom>
           <div className={styles.joinUsContent}>
@@ -74,16 +103,26 @@ export default class Main extends Component {
               <h4>Join Us Now</h4>
               <p onClick={this.handleForm}>&times;</p>
             </div>
-            <form action="#">
-              <p>Please fill the form below: </p>
-              <input type="text" placeholder="Name of Business" />
-              <input type="text" placeholder="Location" />
-              <input type="text" placeholder="Address" />
-              <input type="text" placeholder="Contact Email" />
-              <input type="text" placeholder="Phone Number" />
-              <input type="text" placeholder="Number of Outlets" />
-              <button>Submit</button>
-            </form>
+            {this.state.messageSent ? (
+              <Bounce top>
+                <div className={styles.success}>
+                  <h2>Message Sent Successfully!</h2>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z" /><path fill="cadetblue" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" /></svg>
+                </div>
+              </Bounce>
+            ) : (
+                <div className={styles.form}>
+                  <p>Please fill the form below: </p>
+                  {this.state.error && <p className={styles.error}>Please fill the required fields!</p>}
+                  <input name="businessName" onChange={this.handleInput} type="text" placeholder="Name of Business" />
+                  <input name="location" onChange={this.handleInput} type="text" placeholder="Location" />
+                  <input name="address" onChange={this.handleInput} type="text" placeholder="Address" />
+                  <input style={this.state.error ? { borderColor: 'orangered' } : null} name="email" onChange={this.handleInput} type="text" placeholder="Contact Email" />
+                  <input style={this.state.error ? { borderColor: 'orangered' } : null} name="phone" onChange={this.handleInput} type="text" placeholder="Phone Number" />
+                  <input name="outlets" onChange={this.handleInput} type="text" placeholder="Number of Outlets" />
+                  <button onClick={this.handleSubmit}>Submit</button>
+                </div>
+              )}
           </div>
         </Slide>
       </div>

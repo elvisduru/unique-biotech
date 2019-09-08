@@ -68,7 +68,7 @@ export default class Food extends Component {
           <img src={logo} alt="" />
           <img src={unLogo} alt="" />
           <img src={lawmaLogo} alt="" />
-          <img style={{ width: '400px' }} src={sdgLogo} alt="" />
+          <img style={window.innerWidth > 768 ? { width: '400px' } : { width: '200px' }} src={sdgLogo} alt="" />
         </div>
         <div className={styles.callout}>
           <h4>Do you require our services?</h4>

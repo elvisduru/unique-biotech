@@ -1,0 +1,10 @@
+.Admin main {
+  position: fixed;
+  top: 60px;
+  bottom: 60px;
+  right: 0;
+  width: 85vw;
+  background-color: #f6fafb;
+  padding: 20px 40px 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}

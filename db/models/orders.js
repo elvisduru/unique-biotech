@@ -1,7 +1,6 @@
-var mongoose = require("mongoose");
-const passportLocalMongoose = require('passport-local-mongoose');
+const mongoose = require("mongoose");
 
-const adminSchema = new mongoose.Schema({
+const orderSchema = new mongoose.Schema({
   orderID: String,
   customer: {
     firstName: String,
@@ -29,8 +28,6 @@ const adminSchema = new mongoose.Schema({
   }
 })
 
-adminSchema.plugin(passportLocalMongoose);
+const Order = mongoose.model('Order', orderSchema);
 
-const Admin = mongoose.model('Admin', adminSchema);
-
-module.exports = Admin;
+module.exports = Order;

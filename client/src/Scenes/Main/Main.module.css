@@ -97,7 +97,7 @@
 
 /* Join Us Modal */
 
-.Form {
+.FormOverlay {
   position: fixed;
   left: 0;
   right: 0;
@@ -126,7 +126,7 @@
   z-index: 1;
 }
 
-.joinUsContent form {
+.joinUsContent .form {
   display: flex;
   flex-direction: column;
 }
@@ -143,17 +143,17 @@
   cursor: pointer;
 }
 
-.joinUsContent form > p {
+.joinUsContent .form > p {
   margin-bottom: 20px;
 }
 
-.joinUsContent form input {
+.joinUsContent .form input {
   padding: 10px;
   border: 1px solid rgb(40, 139, 165);
   margin-bottom: 20px;
 }
 
-.joinUsContent form button {
+.joinUsContent .form button {
   align-self: center;
   width: 200px;
   font-size: 16px;
@@ -164,8 +164,25 @@
   color: #fff;
   transition: all 0.3s ease-out;
   cursor: pointer;
+  outline: none;
 }
 
-.joinUsContent form button:hover {
+.joinUsContent .form button:hover {
   width: 230px;
+}
+
+.success {
+  font-size: 40px;
+  text-align: center;
+}
+
+.success svg {
+  width: 80px;
+  height: 80px;
+  margin-top: 20px;
+}
+
+.error {
+  color: orangered;
+  margin-top: 10px;
 }

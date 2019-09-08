@@ -3,3 +3,10 @@
   padding: 0 170px;
   margin-bottom: 100px;
 }
+
+@media (max-width: 768px) {
+  .Shop > div:first-child {
+    padding: 10px;
+    margin-bottom: 50px;
+  }
+}

@@ -27,12 +27,13 @@ export default class Register extends Component {
           <img src={Logo} alt="" />
         </div>
         <div className={styles.body}>
-          <form>
+          <div className={styles.form}>
+            {this.props.error ? <p className={styles.error}>{this.props.error}</p> : null}
             <input type="text" name="username" value={this.state.username} onChange={this.handleInput} placeholder="Username" />
             <input type="password" name="password" value={this.state.password} onChange={this.handleInput} placeholder="Password" />
             <input type="password" name="confPassword" value={this.state.confPassword} onChange={this.handleInput} placeholder="Confirm Password" />
-            <button>Sign Up</button>
-          </form>
+            <button onClick={() => { this.props.handleRegister(this.state.fields) }}>Sign Up</button>
+          </div>
           <p>Already have an account? <Link to="/admin/login">Sign in.</Link></p>
         </div>
       </div>

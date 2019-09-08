@@ -48,7 +48,7 @@ export default class Checkout extends Component {
                 </td>
                 <td className={styles.control}>
                   <p>&#8358; {item.price}</p>
-                  <button onClick={() => this.props.handleRemoveItem(item.id)}>REMOVE THIS ITEM</button>
+                  <button onClick={() => this.props.handleRemoveItem(item.id)}>{window.innerWidth > 768 ? 'REMOVE THIS ITEM' : 'REMOVE'}</button>
                 </td>
               </tr>
             ))}

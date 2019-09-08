@@ -3,7 +3,7 @@
   color: white;
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 100vw;
   padding: 0 60px;
   top: 30px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -11,7 +11,7 @@
   font-weight: bold;
 }
 
-.Menu > div {
+.Menu > .nav {
   display: flex;
   width: 49%;
   justify-content: space-between;
@@ -58,4 +58,95 @@
 .Menu > div > div a img {
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 768px) {
+  .Menu > a > img {
+    width: 50px;
+  }
+
+  .Menu {
+    margin-top: 20px;
+    top: 0;
+    padding: 20px 10px 0;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+  }
+
+  .hamburger span {
+    width: 28px;
+    height: 2px;
+    margin: 3px 0;
+    background-color: white;
+  }
+
+  .mobilenav {
+    display: flex;
+    align-items: center;
+  }
+
+  .MobileMenu {
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .content {
+    width: 70%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    margin-left: auto;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 10px;
+  }
+
+  .social {
+    display: flex;
+    margin-top: 50px;
+  }
+
+  .content ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 50px;
+  }
+
+  .content ul li {
+    font-size: 14px;
+    margin: 15px 0;
+    color: white;
+  }
+
+  .content > p {
+    position: absolute;
+    right: 0;
+    margin: 15px;
+    font-size: 30px;
+    color: white;
+  }
 }

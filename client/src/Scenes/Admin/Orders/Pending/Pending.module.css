@@ -1,0 +1,62 @@
+.Pending table {
+  background-color: white;
+  box-shadow: 0 0 6px solid rgba(0, 0, 0, 0.16);
+  color: rgba(0, 0, 0, 0.86);
+}
+
+.Pending table th,
+.Pending table td {
+  padding: 15px;
+  text-align: left;
+}
+
+.Pending table thead {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 13px;
+}
+
+.Pending table tbody tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  font-size: 15px;
+}
+
+.items {
+  min-width: 250px;
+}
+
+.items p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.controls button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.Pending td p:last-child,
+.Pending button p:last-child {
+  margin-top: 5px;
+}
+
+.alert {
+  display: flex;
+  justify-content: space-between;
+  background-color: #4bc0c0;
+  padding: 15px;
+  color: white;
+  font-size: 14px;
+  margin-bottom: 15px;
+  margin-right: 100px;
+}
+
+.alert p:last-child {
+  cursor: pointer;
+}

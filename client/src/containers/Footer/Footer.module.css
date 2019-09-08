@@ -119,3 +119,17 @@
 .Payment > * {
   margin-right: 10px;
 }
+
+@media (max-width: 768px) {
+  .Footer {
+    padding: 40px 20px 0 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .Top {
+    flex-direction: column;
+  }
+  .widget {
+    margin-bottom: 30px;
+  }
+}

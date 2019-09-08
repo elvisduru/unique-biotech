@@ -21,14 +21,14 @@
   align-items: center;
 }
 
-.body form {
+.body .form {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
 }
 
-.body form input {
+.body .form input {
   width: 300px;
   background-color: white;
   border: 1px solid rgba(120, 130, 140, 0.2);
@@ -40,7 +40,7 @@
   margin-bottom: 18px;
 }
 
-.body form button {
+.body .form button {
   background-color: #16202f;
   color: white;
   border-radius: 0.25rem;
@@ -54,4 +54,9 @@
 
 .body a {
   color: #4bc0c0;
+}
+
+.error {
+  color: red;
+  margin-bottom: 20px;
 }
