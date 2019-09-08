@@ -19,3 +19,19 @@
 .content {
   padding: 80px;
 }
+
+@media (max-width: 768px) {
+  .FAQ main > h1 {
+    font-size: 50px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .FAQ main {
+    padding: 0;
+  }
+
+  .content {
+    padding: 10px;
+  }
+}

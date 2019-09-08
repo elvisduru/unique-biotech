@@ -92,7 +92,7 @@ export default class Contact extends Component {
         <ContactBox />
         <main>
           <div style={{ paddingTop: '10px', width: '100%' }}>
-            <Menu dark />
+            <Menu dark fixed />
           </div>
           <h1>Get in touch</h1>
           <p>Want to get in touch? We'd love to hear from you. Here's how you can reach us...</p>
@@ -113,7 +113,7 @@ export default class Contact extends Component {
           <h1>Where we are located</h1>
           <div className={styles.mapBox}>
             <div className={styles.map}>
-              <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.462976547453!2d3.472640884498448!3d6.445857396588012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf44ef88bed29%3A0x3b90ee2bca12c693!2sUnique+Biotechnology!5e0!3m2!1sen!2sng!4v1566486934903!5m2!1sen!2sng" width="600" height="450" frameBorder="0" style={{ border: 0 }} allowFullScreen></iframe>
+              <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.462976547453!2d3.472640884498448!3d6.445857396588012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf44ef88bed29%3A0x3b90ee2bca12c693!2sUnique+Biotechnology!5e0!3m2!1sen!2sng!4v1566486934903!5m2!1sen!2sng" width={window.innerWidth > 768 ? "600" : "100%"} height={window.innerWidth > 768 ? "450" : "250"} frameBorder="0" style={{ border: 0 }} allowFullScreen></iframe>
             </div>
             <div className={styles.info}>
               <div className={styles.address}>

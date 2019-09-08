@@ -186,3 +186,22 @@
   color: orangered;
   margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+  .content {
+    width: 100%;
+    height: 100%;
+  }
+
+  .joinUsContent {
+    width: 100%;
+  }
+
+  .header {
+    margin-bottom: 20px;
+  }
+
+  .error {
+    margin-top: 0;
+  }
+}

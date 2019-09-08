@@ -11,7 +11,7 @@ const FAQ = () => {
       <ContactBox />
 
       <div className={styles.nav}>
-        <Menu dark />
+        <Menu dark fixed />
       </div>
       <main>
         <h1>Frequently Asked Questions</h1>

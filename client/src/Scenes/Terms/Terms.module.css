@@ -44,3 +44,26 @@
   margin-bottom: 30px;
   font-size: 24px;
 }
+
+@media (max-width: 768px) {
+  .nav {
+    padding-top: 0;
+  }
+  .Terms {
+    margin-top: 130px;
+  }
+
+  .Terms main {
+    padding: 0;
+  }
+
+  .Terms main > h1 {
+    font-size: 50px;
+    padding: 0 50px;
+    text-align: center;
+  }
+
+  .Terms main .content {
+    padding: 30px 20px 20px;
+  }
+}

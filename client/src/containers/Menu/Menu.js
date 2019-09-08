@@ -169,9 +169,9 @@ export default class Menu extends Component {
                 </span>
               </Link>
               <button onClick={this.handleOpenMenu} ref="hamburger" className={styles.hamburger}>
-                <span></span>
-                <span></span>
-                <span></span>
+                <span style={{ backgroundColor: `${this.props.dark ? '#000' : null}` }}></span>
+                <span style={{ backgroundColor: `${this.props.dark ? '#000' : null}` }}></span>
+                <span style={{ backgroundColor: `${this.props.dark ? '#000' : null}` }}></span>
               </button>
             </div>
           )}

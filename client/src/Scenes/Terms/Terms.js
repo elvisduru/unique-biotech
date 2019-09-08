@@ -10,7 +10,7 @@ const Terms = () => {
       <ContactBox />
 
       <div className={styles.nav}>
-        <Menu dark />
+        <Menu dark fixed />
       </div>
       <main>
         <h1>Terms and Conditions</h1>
