@@ -52,7 +52,7 @@ export default class Unique extends Component {
           right
           heading="Proganics Oil"
           image={progOil}
-          text="Proganics Oil is composed of high quality fatty acids with a high acid content which contains antimicrobial properties. Proganics oil is a healthy fat ingredient which is made from the black soldier fly larvae. Our proganics oil can also be blended with other ingredients in formulated pet food, aquaculture and animal feeds. Our proganics Oil is mechanically pressed out of the dry larvae, to provide a high fat oil rich lauric acid, which is only found in coconut and palm kernels oils."
+          text="Proganics oil is a healthy fat ingredient which is made from the black soldier fly larvae and with high composition quality fatty acids content which contains antimicrobial properties. Our proganics oil can also be blended with other ingredients in formulated pet food, aquaculture and animal feeds. Our proganics Oil is mechanically pressed out of the dry larvae, to provide a high fat oil rich lauric acid, which is only found in coconut and palm kernels oils."
         />
         <ImgSection
           heading="Proganics Soil"
