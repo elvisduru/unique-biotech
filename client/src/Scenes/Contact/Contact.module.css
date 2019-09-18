@@ -280,11 +280,13 @@
     height: 100%;
     margin: 0;
     margin-top: 100px;
-    overflow-y: auto;
+    /* overflow-y: auto; */
   }
 
   .body {
     padding: 0 10px;
+    height: 80%;
+    overflow: auto;
   }
 
   .body h2 {
