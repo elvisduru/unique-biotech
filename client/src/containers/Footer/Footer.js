@@ -46,7 +46,7 @@ export default class Footer extends Component {
               <li>Support</li>
               <li>Research</li>
               <li><a href="/terms">Terms and Conditions</a></li>
-              <li>Join Us</li>
+              <li><a href="/careers">Join Us</a></li>
             </ul>
           </div>
           <div className={styles.widget}>

@@ -28,7 +28,7 @@ export default class Menu extends Component {
     const hamburger = this.refs.hamburger;
 
     window.addEventListener("scroll", function () {
-      if (window.scrollY >= window.innerHeight) {
+      if (window.scrollY >= 50) {
         navbar.style.color = "#707070";
         navbar.style.backgroundColor = 'white';
         [...hamburger.children].forEach(child => {
@@ -53,7 +53,7 @@ export default class Menu extends Component {
     const pinterestLogo = navbar.children[1].children[1].children[4].children[0];
 
     window.addEventListener("scroll", function () {
-      if (window.scrollY >= window.innerHeight) {
+      if (window.scrollY >= 100) {
         navbar.style.color = "#707070";
         navbar.style.backgroundColor = 'white';
         navbar.style.top = "0";

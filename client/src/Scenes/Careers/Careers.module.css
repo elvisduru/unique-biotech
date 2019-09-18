@@ -2,7 +2,7 @@
   padding-top: 30px;
 }
 
-.Terms main {
+.Careers main {
   margin-top: 100px;
   padding: 0 150px;
   display: flex;
@@ -11,36 +11,50 @@
   align-items: center;
 }
 
-.Terms main > h1 {
+.Careers main > h1 {
   font-size: 80px;
   font-weight: 100;
 }
 
-.Terms main > p {
+.Careers main > p {
   font-weight: 100;
   font-size: 12px;
   margin-top: 30px;
 }
 
-.Terms main .content {
+.Careers .content ol {
+  margin-bottom: 30px;
+}
+
+.Careers main .content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 50px 150px;
 }
 
-.Terms .content p {
+.Careers .content p,
+.Careers .content ol li {
   font-size: 14px;
   color: #606060;
   letter-spacing: 0.3px;
   line-height: 18px;
 }
 
-.Terms .content > div:not(:first-child) {
+.Careers .content ol li {
+  margin-bottom: 15px;
+}
+
+.Careers .content ol li::before {
+  content: "-> ";
+  position: relative;
+}
+
+.Careers .content > div:not(:first-child) {
   margin-top: 50px;
 }
 
-.Terms .content h2 {
+.Careers .content h2 {
   margin-bottom: 30px;
   font-size: 24px;
 }
@@ -49,21 +63,21 @@
   .nav {
     padding-top: 0;
   }
-  .Terms {
+  .Careers {
     margin-top: 130px;
   }
 
-  .Terms main {
+  .Careers main {
     padding: 0;
   }
 
-  .Terms main > h1 {
+  .Careers main > h1 {
     font-size: 50px;
     padding: 0 50px;
     text-align: center;
   }
 
-  .Terms main .content {
+  .Careers main .content {
     padding: 30px 20px 20px;
   }
 }
