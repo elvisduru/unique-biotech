@@ -63,6 +63,7 @@ export default class Unique extends Component {
           right
           heading="Proganics Larvae"
           image={progLarvae}
+          text="Our Proganics Larvae is a natural food source for fish, poultry and other livestock’s with nutritional composition as good as that of fish-meal and far better than that of soya bean. Our Proganics Larvae is a natural super food; it has excellent digestibility and weight-gaining properties, generally tolerant to feed and a reduced cost of feeding for animal farmer’s, providing above 40% crude protein, much calcium, and many amino acids. Under Optimum conditions, the Proganics Larvae weighs an average of 4kg, gotten from 1gram of BSF eggs producing about 22,000 to 25,000 pieces of Larvae."
         />
       </div>
     )

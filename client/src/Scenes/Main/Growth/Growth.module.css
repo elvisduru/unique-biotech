@@ -46,7 +46,7 @@
 
 @media (max-width: 768px) {
   .callout {
-    height: unset;
+    height: 500px;
     padding: 30px 15px;
     margin-top: 60px;
   }

@@ -136,8 +136,8 @@
   }
 
   .callout {
-    height: unset;
     padding: 15px;
+    height: 500px;
   }
 
   .callout h4 {

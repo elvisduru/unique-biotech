@@ -7,9 +7,9 @@ import shopIcon from '../../../../../images/shopping-cart.svg';
 const ProductItem = ({ name, image, url }) => {
   return (
     <div className={styles.ProductItem}>
-      <div className={styles.image}>
+      <a href={`/shop${url}`} className={styles.image}>
         <img src={image} alt="" />
-      </div>
+      </a>
       <div className={styles.footer}>
         <p>{name}</p>
         <button>
