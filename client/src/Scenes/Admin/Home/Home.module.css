@@ -1,14 +1,49 @@
 .Home {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
 }
 
 .Home h1 {
   font-size: 30px;
 }
 
+.charts {
+  height: 300px;
+  width: 100%;
+  margin-right: auto;
+  margin-bottom: 60px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.doughnut {
+  width: 30%;
+}
+
+.doughnut h2,
+.barchart h2 {
+  margin-bottom: 20px;
+}
+
+.doughnut > div:first-child {
+  width: 100%;
+}
+
+.doughnut > div:last-child {
+  margin-top: 20px;
+  z-index: 1;
+}
+
+.barchart > div:last-child {
+  margin-top: 40px;
+}
+
 .content {
-  padding: 80px 300px 80px 0;
+  margin-top: 80px;
+  padding: 0 300px 80px 0;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
