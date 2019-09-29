@@ -30,6 +30,9 @@ export default class Login extends Component {
             <input type="password" name="password" value={this.state.password} onChange={this.handleInput} placeholder="Password" />
             <button onClick={(e) => {
               this.props.handleLogin(this.state.fields)
+              if (this.props.error) {
+                e.target.innerText = "Try again"
+              }
               e.target.innerText = "Logging you in..."
             }}>Sign In</button>
           </div>
