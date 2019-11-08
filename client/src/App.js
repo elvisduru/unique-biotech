@@ -9,6 +9,7 @@ import Terms from './Scenes/Terms/Terms';
 import FAQ from './Scenes/FAQ/FAQ';
 import Admin from './Scenes/Admin/Admin';
 import Careers from './Scenes/Careers/Careers';
+import Gallery from './Scenes/Gallery/Gallery';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/terms" component={Terms} />
           <Route path="/careers" component={Careers} />
           <Route path="/faq" component={FAQ} />
+          <Route path="/gallery" component={Gallery} />
           <Route path="/admin" component={Admin} />
           <Redirect to="/" />
         </Switch>

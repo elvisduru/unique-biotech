@@ -1,0 +1,38 @@
+.nav {
+  padding-top: 30px;
+}
+
+.Gallery main {
+  margin-top: 120px;
+  padding: 0 150px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  align-items: center;
+}
+
+.Gallery main > h1 {
+  font-size: 80px;
+  font-weight: 100;
+}
+
+.content {
+  padding: 80px;
+}
+
+@media (max-width: 768px) {
+  .Gallery main > h1 {
+    font-size: 50px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .Gallery main {
+    padding: 0;
+    margin-top: 60px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+}
