@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import styles from './Confirm.module.css';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import styles from "./Confirm.module.css";
+import { Link } from "react-router-dom";
 
 export default class Confirm extends Component {
   render() {
-    const items = this.props.items.filter(item => item.quantity > 0)
+    const items = this.props.items.filter((item) => item.quantity > 0);
     return (
       <div className={styles.Confirm}>
         <h1>CONFIRMATION</h1>
@@ -24,8 +24,12 @@ export default class Confirm extends Component {
           </div>
         </div>
         <div className={styles.thanks}>
-          <h2>THANK YOU {this.props.firstName} {this.props.lastName}</h2>
-          <p>Thank you for your order. Your order number is {this.props.orderID}.</p>
+          <h2>
+            THANK YOU {this.props.firstName} {this.props.lastName}
+          </h2>
+          <p>
+            Thank you for your order. Your order number is {this.props.orderID}.
+          </p>
         </div>
 
         <div className={styles.order}>
@@ -42,8 +46,15 @@ export default class Confirm extends Component {
             <tbody>
               {items.map((item, index) => (
                 <tr key={index}>
-                  <td className={styles.image}><img src={item.image} alt="" /></td>
-                  <td className={styles.name}><Link to={`/shop/${item.id}`}>{item.name}</Link></td>
+                  <td className={styles.image}>
+                    <img src={item.image} alt="" />
+                  </td>
+                  <td className={styles.name}>
+                    <Link to={`/shop/${item.id}`}>
+                      {item.name}
+                      <span>{item.weight}</span>
+                    </Link>
+                  </td>
                   <td className={styles.quantity}>
                     <p>{item.quantity}</p>
                   </td>
@@ -68,9 +79,11 @@ export default class Confirm extends Component {
           </div>
         </div>
         <p className={styles.help}>
-          NEED HELP? CALL US: <a href="tel:+234014537121">01 453 7121</a> OR <a href="tel:+2348107763821">+234 810 776 3821</a> | EMAIL CUSTOMER CARE | SHIPPING INFORMATION | RETURNS &amp; EXCHANGES
+          NEED HELP? CALL US: <a href="tel:+234014537121">01 453 7121</a> OR{" "}
+          <a href="tel:+2348107763821">+234 810 776 3821</a> | EMAIL CUSTOMER
+          CARE | SHIPPING INFORMATION | RETURNS &amp; EXCHANGES
         </p>
-      </div >
-    )
+      </div>
+    );
   }
 }
