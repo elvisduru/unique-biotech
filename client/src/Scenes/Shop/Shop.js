@@ -64,6 +64,8 @@ export default class Shop extends Component {
     fields: {
       firstName: "",
       lastName: "",
+      businessName: "",
+      farmType: "",
       email: "",
       address1: "",
       address2: "",
@@ -85,12 +87,14 @@ export default class Shop extends Component {
 
     const total = subtotal + this.state.shipping;
     this.setState({ total });
+    localStorage.setItem("store", JSON.stringify(this.state));
   };
 
   handleInput = (evt) => {
     const fields = { ...this.state.fields };
     fields[evt.target.name] = evt.target.value;
     this.setState({ fields });
+    localStorage.setItem("store", JSON.stringify(this.state));
   };
 
   handleAddItem = (item) => {
@@ -101,6 +105,7 @@ export default class Shop extends Component {
       return x;
     });
     this.setState({ items });
+    localStorage.setItem("store", JSON.stringify(this.state));
   };
 
   handleIncrease = (id) => {
@@ -108,6 +113,7 @@ export default class Shop extends Component {
     const itemIndex = items.findIndex((x) => x.id === id);
     items[itemIndex].quantity++;
     this.setState({ items });
+    localStorage.setItem("store", JSON.stringify(this.state));
   };
 
   handleDecrease = (id) => {
@@ -116,6 +122,7 @@ export default class Shop extends Component {
     if (items[itemIndex].quantity > 1) {
       items[itemIndex].quantity--;
       this.setState({ items });
+      localStorage.setItem("store", JSON.stringify(this.state));
     } else return;
   };
 
@@ -124,17 +131,25 @@ export default class Shop extends Component {
     const itemIndex = items.findIndex((x) => x.id === id);
     items[itemIndex].quantity = 0;
     this.setState({ items });
+    localStorage.setItem("store", JSON.stringify(this.state));
   };
 
   componentDidMount() {
     // later generate ID from server
     this.getID();
+    this.loadState();
   }
+
+  loadState = () => {
+    const persistedState = JSON.parse(localStorage.getItem("store"));
+    this.setState({ ...persistedState });
+  };
 
   getID = async () => {
     try {
       const response = await axios.get("/api/getID");
       this.setState({ orderID: response.data });
+      localStorage.setItem("orderID", JSON.stringify(this.state.orderID));
     } catch (err) {
       console.log(err);
     }
@@ -150,6 +165,7 @@ export default class Shop extends Component {
 
     try {
       await axios.post("/api/orders", order);
+      localStorage.clear();
     } catch (err) {
       console.log(err);
     }

@@ -52,7 +52,7 @@ export default class Confirm extends Component {
                   <td className={styles.name}>
                     <Link to={`/shop/${item.id}`}>
                       {item.name}
-                      <span>{item.weight}</span>
+                      <span> ({item.weight})</span>
                     </Link>
                   </td>
                   <td className={styles.quantity}>

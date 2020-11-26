@@ -43,6 +43,13 @@ export default class Checkout extends Component {
             </tr>
           </thead>
           <tbody>
+            {items.length <= 0 && (
+              <tr>
+                <td colSpan={4}>
+                  <p style={{ margin: "20px 0" }}>You have no items in cart.</p>
+                </td>
+              </tr>
+            )}
             {items.map((item, index) => (
               <tr key={index}>
                 <td className={styles.image}>

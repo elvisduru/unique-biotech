@@ -1,26 +1,26 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import styles from './Billing.module.css';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import styles from "./Billing.module.css";
 
-import PaystackButton from 'react-paystack';
+// import PaystackButton from "react-paystack";
 
 export default class Billing extends Component {
-
   handleCompletePurphase = (response) => {
-    console.log(response)
-    if (response.status === "success") {
-      this.props.processOrder();
-      this.props.history.push("/shop/confirm");
-    }
-  }
+    // console.log(response);
+    // if (response.status === "success") {
+    //   this.props.processOrder();
+    //   this.props.history.push("/shop/confirm");
+    // }
+    this.props.processOrder();
+    this.props.history.push("/shop/confirm");
+  };
 
   close = () => {
     console.log("Payment closed");
-  }
+  };
 
   render() {
-
-    const items = this.props.items.filter(item => item.quantity > 0)
+    const items = this.props.items.filter((item) => item.quantity > 0);
 
     return (
       <div className={styles.Billing}>
@@ -56,8 +56,12 @@ export default class Billing extends Component {
                 <tbody>
                   {items.map((item, index) => (
                     <tr key={index}>
-                      <td className={styles.image}><img src={item.image} alt="" /></td>
-                      <td className={styles.name}><Link to={`/shop/${item.id}`}>{item.name}</Link></td>
+                      <td className={styles.image}>
+                        <img src={item.image} alt="" />
+                      </td>
+                      <td className={styles.name}>
+                        <Link to={`/shop/${item.id}`}>{item.name}</Link>
+                      </td>
                       <td className={styles.quantity}>
                         <p>{item.quantity}</p>
                       </td>
@@ -87,7 +91,11 @@ export default class Billing extends Component {
             <div className={styles.wrapper}>
               <h4>SHIPPING ADDRESS</h4>
               <div>
-                <p>{this.props.fields.firstName} {this.props.fields.lastName}</p>
+                <p>
+                  {this.props.fields.firstName} {this.props.fields.lastName}
+                </p>
+                <p>{this.props.fields.businessName}</p>
+                <p>{this.props.fields.farmType}</p>
                 <p>{this.props.fields.address1}</p>
                 <p>{this.props.fields.address2}</p>
                 <p>{this.props.fields.city}</p>
@@ -107,7 +115,7 @@ export default class Billing extends Component {
             </div>
           </div>
           <div className={styles.purchase}>
-            <PaystackButton
+            {/* <PaystackButton
               text="Make Payment"
               className="payButton"
               callback={this.handleCompletePurphase}
@@ -119,11 +127,13 @@ export default class Billing extends Component {
               amount={this.props.total * 100}
               paystackkey={this.props.pkey}
               tag="button"
-            />
-            {/* <button onClick={this.handleCompletePurphase}>COMPLETE PURCHASE</button> */}
+            /> */}
+            <button onClick={this.handleCompletePurphase}>
+              COMPLETE PURCHASE
+            </button>
           </div>
         </div>
       </div>
-    )
+    );
   }
 }

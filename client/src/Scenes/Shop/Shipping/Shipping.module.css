@@ -108,7 +108,8 @@
   align-items: center;
 }
 
-.field input {
+.field input,
+.field select {
   width: 250px;
   padding: 5px;
   height: 30px;
@@ -116,7 +117,8 @@
   outline: none;
 }
 
-.field input:focus {
+.field input:focus,
+.field select:focus {
   border-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -174,7 +176,8 @@
     font-size: 13px;
   }
 
-  .field input {
+  .field input,
+  .field select {
     width: 210px;
   }
 

@@ -1,6 +1,7 @@
 .ProductList {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  /* justify-content: space-between; */
 }
 
 @media (max-width: 768px) {
