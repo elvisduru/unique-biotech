@@ -1,31 +1,33 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
-import styles from './Home.module.css';
+import { Link } from "react-router-dom";
+import styles from "./Home.module.css";
 
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
-import bg1 from '../../images/bg1.jpg';
-import bg2 from '../../images/wasteBg.jpg';
-import bg3 from '../../images/bg3.jpg';
-import slide01 from '../../images/slide01.jpg';
-import slide02 from '../../images/slide02.jpg';
-import slide03 from '../../images/slide03.png';
-import slide04 from '../../images/wasteBg2.jpg';
-import slide06 from '../../images/vegetablewaste.jpg';
-import slide07 from '../../images/PigPhoto.png';
-import slide08 from '../../images/slide08.jpg';
-import slide09 from '../../images/poultry.png';
-import fruitWaste from '../../images/fruitwaste2.jpg';
+import bg1 from "../../images/bg1.jpg";
+import bg2 from "../../images/wasteBg.jpg";
+import bg3 from "../../images/bg3.jpg";
+import slide01 from "../../images/slide01.jpg";
+import slide02 from "../../images/slide02.jpg";
+import slide03 from "../../images/slide03.png";
+import slide04 from "../../images/wasteBg2.jpg";
+import slide06 from "../../images/vegetablewaste.jpg";
+import slide07 from "../../images/PigPhoto.png";
+import slide08 from "../../images/slide08.jpg";
+import slide09 from "../../images/poultry.png";
+import fruitWaste from "../../images/fruitwaste2.jpg";
 
-import longArrowRight from '../../images/long-arrow-right.svg';
+import longArrowRight from "../../images/long-arrow-right.svg";
 import Slider from "../../containers/Slider/Slider";
 import Menu from "../../containers/Menu/Menu";
 import ContactBox from "../../components/ContactBox/ContactBox";
+import { Banner } from "../../components/Banner";
 
 export default class Home extends Component {
   state = {
     currentIndex: 0,
     translateValue: 0,
+    showBanner: true,
     slides: [
       {
         title: "Unique Planet, Unique Protein",
@@ -39,7 +41,7 @@ export default class Home extends Component {
           { caption: "The Black Soldier Fly", image: slide01 },
           { caption: "Black Soldier Fly Larvae", image: slide08 },
           { caption: "Black Soldier Fly Eggs", image: slide02 },
-        ]
+        ],
       },
       {
         title: "Organic Waste Processing",
@@ -54,7 +56,7 @@ export default class Home extends Component {
           { caption: "Food Waste", image: slide04 },
           { caption: "Fruit Waste", image: bg2 },
           { caption: "Vegetable Waste", image: slide06 },
-        ]
+        ],
       },
       {
         title: "Our Market",
@@ -68,9 +70,9 @@ export default class Home extends Component {
           { caption: "A Healthy Piglet", image: slide07 },
           { caption: "Catfish Ready for Harvest", image: slide03 },
           { caption: "Chickens Eating Larvae", image: slide09 },
-        ]
-      }
-    ]
+        ],
+      },
+    ],
   };
 
   handlePrevSlide = () => {
@@ -78,30 +80,30 @@ export default class Home extends Component {
     if (this.state.currentIndex === 0) {
       return this.setState({
         currentIndex: this.state.slides.length - 1,
-        translateValue: (this.state.slides.length - 1) * -100
-      })
+        translateValue: (this.state.slides.length - 1) * -100,
+      });
     }
 
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       currentIndex: prevState.currentIndex - 1,
-      translateValue: prevState.translateValue + 100
-    }))
-  }
+      translateValue: prevState.translateValue + 100,
+    }));
+  };
 
   handleNextSlide = () => {
     // Reset if at end of slider
     if (this.state.currentIndex === this.state.slides.length - 1) {
       return this.setState({
         currentIndex: 0,
-        translateValue: 0
-      })
+        translateValue: 0,
+      });
     }
 
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       currentIndex: prevState.currentIndex + 1,
-      translateValue: prevState.translateValue - 100
-    }))
-  }
+      translateValue: prevState.translateValue - 100,
+    }));
+  };
 
   static interval;
 
@@ -110,8 +112,12 @@ export default class Home extends Component {
   }
 
   componentWillUnmount() {
-    clearInterval(this.interval)
+    clearInterval(this.interval);
   }
+
+  closeBanner = () => {
+    this.setState({ showBanner: false });
+  };
 
   render() {
     return (
@@ -119,53 +125,70 @@ export default class Home extends Component {
         upHandler={this.handlePrevSlide}
         downHandler={this.handleNextSlide}
         customStyle={{
-          width: '100%',
-          height: '100vh',
-          overflowY: 'hidden'
+          width: "100%",
+          height: "100vh",
+          overflowY: "hidden",
         }}
       >
+        {this.state.showBanner && <Banner close={this.closeBanner} />}
         <ContactBox />
 
         <Menu fixed />
         <div className={styles.Indicator}>
           <div className={styles.IndicatorBar}>
             {this.state.slides.map((_, index) => (
-              <div style={{
-                width: '5px',
-                height: '5px',
-                transform: `scale(${index === this.state.currentIndex ? '8' : '1'})`,
-                backgroundColor: '#F0F1F6',
-                borderRadius: '50%'
-              }} key={index} />
+              <div
+                style={{
+                  width: "5px",
+                  height: "5px",
+                  transform: `scale(${
+                    index === this.state.currentIndex ? "8" : "1"
+                  })`,
+                  backgroundColor: "#F0F1F6",
+                  borderRadius: "50%",
+                }}
+                key={index}
+              />
             ))}
           </div>
           <p className={styles.Counter}>
             0{this.state.currentIndex + 1} / 0{this.state.slides.length}
           </p>
         </div>
-        <div style={{
-          transform: `translateY(${this.state.translateValue}vh)`,
-          transition: 'transform ease-out 0.45s'
-        }}>
+        <div
+          style={{
+            transform: `translateY(${this.state.translateValue}vh)`,
+            transition: "transform ease-out 0.45s",
+          }}
+        >
           {this.state.slides.map((slide, index) => (
-            <div className={styles.Slide} key={index} style={{
-              backgroundImage: `url(${slide.bgImage})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}>
+            <div
+              className={styles.Slide}
+              key={index}
+              style={{
+                backgroundImage: `url(${slide.bgImage})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
               <div className={styles.Left}>
                 <h1>{slide.title}</h1>
                 <p>{slide.description}</p>
-                <Link to={{ pathname: "/main", mainProps: slide.mainValue }} style={{ backgroundColor: slide.btnColor }}>Learn more <img src={longArrowRight} alt="" /></Link>
+                <Link
+                  to={{ pathname: "/main", mainProps: slide.mainValue }}
+                  style={{ backgroundColor: slide.btnColor }}
+                >
+                  Learn more <img src={longArrowRight} alt="" />
+                </Link>
               </div>
-              {window.innerWidth > 768 && <div className={styles.Right}>
-                <Slider slides={slide.miniSlider} btnColor={slide.btnColor} />
-              </div>}
-
+              {window.innerWidth > 768 && (
+                <div className={styles.Right}>
+                  <Slider slides={slide.miniSlider} btnColor={slide.btnColor} />
+                </div>
+              )}
             </div>
           ))}
         </div>
-
       </ReactScrollWheelHandler>
     );
   }
