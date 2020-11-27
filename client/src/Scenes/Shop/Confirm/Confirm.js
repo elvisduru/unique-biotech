@@ -29,7 +29,7 @@ export default class Confirm extends Component {
           </h2>
           <p>
             Thank you for your order. Your order number is {this.props.orderID}.
-            A customer service officer will call you shortly!
+            Our customer service officer, will get in touch with you shortly!
           </p>
         </div>
 
