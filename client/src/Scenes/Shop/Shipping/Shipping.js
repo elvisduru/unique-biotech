@@ -180,8 +180,7 @@ export default class Shipping extends Component {
           </div>
           <div className={styles.right}>
             <div>
-              <h2>SHIPPING RESTRICTIONS AND DUTIES MAY APPLY</h2>
-              <p className={styles.bold}>NEED HELP?</p>
+              <h2>NEED HELP?</h2>
               <p>
                 CALL US: <a href="tel:+234014537121">01 453 7121</a> |{" "}
                 <a href="tel:+2348107763821">+234 810 776 3821</a>
@@ -197,7 +196,10 @@ export default class Shipping extends Component {
               </p>
               <p>
                 By Submitting this form, you agree to our{" "}
-                <Link to="/terms" style={{ color: "#E9BF5E" }}>
+                <Link
+                  to="/terms"
+                  style={{ color: "#FF9800", fontWeight: "bold" }}
+                >
                   terms and conditions
                 </Link>
               </p>

@@ -45,7 +45,7 @@ export default class Shop extends Component {
       {
         id: "larvae",
         name: "Proganics Larvae",
-        weight: "20Kg",
+        weight: "25Kg",
         price: 9625,
         quantity: 0,
         image: progLarvae2,

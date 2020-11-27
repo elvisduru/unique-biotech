@@ -60,7 +60,9 @@ export default class Billing extends Component {
                         <img src={item.image} alt="" />
                       </td>
                       <td className={styles.name}>
-                        <Link to={`/shop/${item.id}`}>{item.name}</Link>
+                        <Link to={`/shop/${item.id}`}>
+                          {item.name} ({item.weight})
+                        </Link>
                       </td>
                       <td className={styles.quantity}>
                         <p>{item.quantity}</p>
