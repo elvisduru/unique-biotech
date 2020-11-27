@@ -45,6 +45,7 @@ export default class Pending extends Component {
       .get("/api/orders/pending")
       .then((response) => {
         const orders = response.data;
+        console.log(orders);
         this.setState({ orders });
       })
       .catch((err) => console.log(err));
@@ -98,6 +99,7 @@ export default class Pending extends Component {
               <th>Order ID</th>
               <th>Items</th>
               <th>Name</th>
+              <th>Email</th>
               <th>Mobile</th>
               <th>Location</th>
               <th>Post Code</th>
@@ -128,6 +130,7 @@ export default class Pending extends Component {
                 <td className={styles.name}>
                   {order.customer.firstName} {order.customer.lastName}
                 </td>
+                <td className={styles.email}>{order.customer.email}</td>
                 <td className={styles.mobile}>
                   <p>{order.customer.mobile}</p>{" "}
                   <p>

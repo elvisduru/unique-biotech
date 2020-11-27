@@ -5,6 +5,9 @@ const orderSchema = new mongoose.Schema({
   customer: {
     firstName: String,
     lastName: String,
+    businessName: String,
+    farmType: String,
+    email: String,
     address1: String,
     address2: String,
     city: String,
@@ -17,17 +20,18 @@ const orderSchema = new mongoose.Schema({
   items: [],
   approved: {
     type: Boolean,
-    default: false
+    default: false,
   },
   declined: {
     type: Boolean,
-    default: false
+    default: false,
   },
   created: {
-    type: Date, default: Date.now
-  }
-})
+    type: Date,
+    default: Date.now,
+  },
+});
 
-const Order = mongoose.model('Order', orderSchema);
+const Order = mongoose.model("Order", orderSchema);
 
 module.exports = Order;
