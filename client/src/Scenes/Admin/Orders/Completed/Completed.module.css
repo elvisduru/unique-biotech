@@ -1,3 +1,15 @@
+.Completed {
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.Completed th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: white;
+}
+
 .Completed table {
   background-color: white;
   box-shadow: 0 0 6px solid rgba(0, 0, 0, 0.16);

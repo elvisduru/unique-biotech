@@ -1,7 +1,19 @@
+.Pending {
+  overflow-y: auto;
+  max-height: 100%;
+}
+
 .Pending table {
   background-color: white;
   box-shadow: 0 0 6px solid rgba(0, 0, 0, 0.16);
   color: rgba(0, 0, 0, 0.86);
+}
+
+.Pending th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: white;
 }
 
 .Pending table th,
