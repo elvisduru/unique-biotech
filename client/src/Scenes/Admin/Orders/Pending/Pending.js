@@ -10,22 +10,45 @@ export default class Pending extends Component {
     status: "",
   };
 
+  transformOrders = (orders) => {
+    return orders.map((order) => {
+      let orderClone = Object.assign({}, order);
+      delete orderClone._id;
+      delete orderClone.approved;
+      delete orderClone.declined;
+      for (const key in orderClone.customer) {
+        if (Object.hasOwnProperty.call(orderClone.customer, key)) {
+          const element = orderClone.customer[key];
+          orderClone[key] = element;
+        }
+      }
+      delete orderClone.customer;
+      orderClone["Items"] = "";
+      for (let i = 0; i < orderClone.items.length; i++) {
+        const item = orderClone.items[i];
+        orderClone[
+          "Items"
+        ] += `${item.name}${item.quantity} - ₦${item.price}\r\n`;
+      }
+      delete orderClone.items;
+      delete orderClone.__v;
+      orderClone.created = format(
+        new Date(orderClone.created),
+        "MM/dd/yyyy-hh:mm"
+      );
+      return orderClone;
+    });
+  };
+
   fetchOrders = () => {
     axios
       .get("/api/orders/pending")
       .then((response) => {
         const orders = response.data;
-        console.log(orders);
         this.setState({ orders });
       })
       .catch((err) => console.log(err));
   };
-
-  // transformOrders = (orders) => {
-  //   orders.map(order => {
-
-  //   })
-  // }
 
   approveOrder = (id) => {
     axios
@@ -60,11 +83,11 @@ export default class Pending extends Component {
           </div>
         )}
         <CSVLink
-          filename={`Uniquestore - report(${format(
+          filename={`Uniquestore - pending orders report(${format(
             new Date(),
             "MM/dd/yyyy-hh:mm"
           )}).csv`}
-          data={this.state.orders}
+          data={this.transformOrders(this.state.orders)}
         >
           Export as Excel
         </CSVLink>

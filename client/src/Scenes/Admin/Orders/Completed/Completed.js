@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import styles from "./Completed.module.css";
 import axios from "axios";
+import { CSVLink } from "react-csv";
+import { format } from "date-fns";
 
 export default class Completed extends Component {
   state = {
@@ -16,6 +18,36 @@ export default class Completed extends Component {
         this.fetchOrders();
       })
       .catch((err) => console.log(err));
+  };
+
+  transformOrders = (orders) => {
+    return orders.map((order) => {
+      let orderClone = Object.assign({}, order);
+      delete orderClone._id;
+      delete orderClone.approved;
+      delete orderClone.declined;
+      for (const key in orderClone.customer) {
+        if (Object.hasOwnProperty.call(orderClone.customer, key)) {
+          const element = orderClone.customer[key];
+          orderClone[key] = element;
+        }
+      }
+      delete orderClone.customer;
+      orderClone["Items"] = "";
+      for (let i = 0; i < orderClone.items.length; i++) {
+        const item = orderClone.items[i];
+        orderClone[
+          "Items"
+        ] += `${item.name}${item.quantity} - ₦${item.price}\r\n`;
+      }
+      delete orderClone.items;
+      delete orderClone.__v;
+      orderClone.created = format(
+        new Date(orderClone.created),
+        "MM/dd/yyyy-hh:mm"
+      );
+      return orderClone;
+    });
   };
 
   fetchOrders = () => {
@@ -40,6 +72,15 @@ export default class Completed extends Component {
             <p onClick={() => this.setState({ status: "" })}>&times;</p>
           </div>
         )}
+        <CSVLink
+          filename={`Uniquestore - completed orders report(${format(
+            new Date(),
+            "MM/dd/yyyy-hh:mm"
+          )}).csv`}
+          data={this.transformOrders(this.state.orders)}
+        >
+          Export as Excel
+        </CSVLink>
         <table>
           <thead>
             <tr>
