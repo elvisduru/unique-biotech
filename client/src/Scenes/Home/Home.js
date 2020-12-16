@@ -27,7 +27,7 @@ export default class Home extends Component {
   state = {
     currentIndex: 0,
     translateValue: 0,
-    showBanner: true,
+    showBanner: false,
     slides: [
       {
         title: "Unique Planet, Unique Protein",
